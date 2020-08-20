@@ -1,0 +1,15 @@
+test_word = "faer"
+for i in test_word:
+    for j in test_word:
+        if j == i:
+            continue
+        for k in test_word:
+            if k == i or k == j:
+                continue
+            for l in test_word:
+                if l == k or l == j or l == i:
+                    continue
+                for m in test_word:
+                    if m == l or m == k or m == j or m == i:
+                        continue
+            print(i, j, k, l)
