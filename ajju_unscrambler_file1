@@ -1,0 +1,23 @@
+#compare two words of same size. 
+def compare(word,user_word):
+    for i in word:
+        if i not in user_word:
+            return 0
+    return 1
+
+#Contains all the words of dictionary. 
+arjuns_dictionary = ["for", "fear", "fare", "farewell", "fast","forward","fame", "full", "fanthom", "fantasy"] 
+print ("Arjun Gadi's dictionary size", len(arjuns_dictionary))
+
+#Take user input 
+print ("Please enter the word you want to unscramble and check if it is present in Arjun's Dictionary")
+user_word = input()
+
+#Find all the scrambled words present in dictionary
+user_word_length = len(user_word)
+
+#Take each word in dictionary 
+for word in arjuns_dictionary:
+    if len(word) == user_word_length:
+        if(compare(word,user_word) == 1):
+            print("Unscrambled word present in Arjun's dictionary",word)
